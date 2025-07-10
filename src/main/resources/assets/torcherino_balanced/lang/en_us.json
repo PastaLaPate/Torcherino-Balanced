@@ -1,0 +1,13 @@
+{
+  "itemGroup.torcherino_balanced": "Example Mod Tab",
+  "block.torcherino_balanced.example_block": "Example Block",
+  "item.torcherino_balanced.example_item": "Example Item",
+
+  "torcherino_balanced.configuration.title": "Balanced Torcherino Configs",
+  "torcherino_balanced.configuration.section.torcherino_balanced.common.toml": "Balanced Torcherino Configs",
+  "torcherino_balanced.configuration.section.torcherino_balanced.common.toml.title": "Balanced Torcherino Configs",
+  "torcherino_balanced.configuration.items": "Item List",
+  "torcherino_balanced.configuration.logDirtBlock": "Log Dirt Block",
+  "torcherino_balanced.configuration.magicNumberIntroduction": "Magic Number Text",
+  "torcherino_balanced.configuration.magicNumber": "Magic Number"
+}
