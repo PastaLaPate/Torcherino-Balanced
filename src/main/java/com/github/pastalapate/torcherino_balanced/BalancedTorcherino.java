@@ -1,5 +1,6 @@
 package com.github.pastalapate.torcherino_balanced;
 
+import com.github.pastalapate.torcherino_balanced.blocks.entity_renderer.ERTorcherino;
 import com.github.pastalapate.torcherino_balanced.blocks.tileentity.TETorcherino;
 import com.github.pastalapate.torcherino_balanced.registries.ModBlockEntities;
 import com.github.pastalapate.torcherino_balanced.registries.ModBlocks;
@@ -16,6 +17,7 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
@@ -29,13 +31,14 @@ public class BalancedTorcherino {
 
     public BalancedTorcherino(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::registerCapabilities);
+        modEventBus.addListener(this::registerRenderers);
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITY_TYPES.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
-
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
@@ -59,12 +62,15 @@ public class BalancedTorcherino {
         LOGGER.info("HELLO from server starting");
     }
 
-    @SubscribeEvent
-    public static void registerCapabilities(RegisterCapabilitiesEvent event) {
+    public void registerCapabilities(RegisterCapabilitiesEvent event) {
         event.registerBlockEntity(
                 Capabilities.EnergyStorage.BLOCK,
                 ModBlockEntities.TETorcherino_Entity.get(),  // BlockEntityType
                 TETorcherino::getEnergyStorage
         );
+    }
+
+    public void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(ModBlockEntities.TETorcherino_Entity.get(), ERTorcherino::new);
     }
 }
