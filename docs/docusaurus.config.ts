@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Balanced Torcherino',
-  tagline: A more balanced version of torcherino...',
+  tagline: 'A more balanced version of torcherino...',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -129,7 +129,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/PastaLaPate/Torcherino-Balanced/tree/master/docs',
             },
           ],
         },
