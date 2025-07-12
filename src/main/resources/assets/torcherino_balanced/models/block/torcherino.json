@@ -1,20 +1,130 @@
 {
-  "parent": "minecraft:block/block",
+  "parent": "builtin/entity",
   "textures": {
     "1": "torcherino_balanced:block/torcherino",
     "particle": "torcherino_balanced:block/torcherino"
   },
+  "display": {
+    "thirdperson_righthand": {
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "thirdperson_lefthand": {
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "firstperson_righthand": {
+      "translation": [
+        4.25,
+        -6.5,
+        0
+      ]
+    },
+    "firstperson_lefthand": {
+      "translation": [
+        0,
+        -6,
+        0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        28,
+        63,
+        0
+      ],
+      "translation": [
+        0,
+        -3.5,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "fixed": {
+      "translation": [
+        0,
+        -7,
+        0
+      ]
+    }
+  },
   "elements": [
     {
-      "from": [0, 0, 0],
-      "to": [16, 16, 16],
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
       "faces": {
-        "north": {"uv": [0, 0, 16, 16], "texture": "#1"},
-        "east": {"uv": [0, 0, 16, 16], "texture": "#1"},
-        "south": {"uv": [0, 0, 16, 16], "texture": "#1"},
-        "west": {"uv": [0, 0, 16, 16], "texture": "#1"},
-        "up": {"uv": [0, 0, 16, 16], "texture": "#2"},
-        "down": {"uv": [0, 0, 16, 16], "texture": "#2"}
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#1"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#1"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#1"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#1"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        }
       }
     }
   ]

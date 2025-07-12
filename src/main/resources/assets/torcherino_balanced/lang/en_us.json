@@ -1,8 +1,7 @@
 {
-  "itemGroup.torcherino_balanced": "Example Mod Tab",
-  "block.torcherino_balanced.example_block": "Example Block",
+  "itemGroup.torcherino_balanced": "Balanced Torcherino",
+  "block.torcherino_balanced.torcherino": "Torcherino",
   "item.torcherino_balanced.example_item": "Example Item",
-
   "torcherino_balanced.configuration.title": "Balanced Torcherino Configs",
   "torcherino_balanced.configuration.section.torcherino_balanced.common.toml": "Balanced Torcherino Configs",
   "torcherino_balanced.configuration.section.torcherino_balanced.common.toml.title": "Balanced Torcherino Configs",

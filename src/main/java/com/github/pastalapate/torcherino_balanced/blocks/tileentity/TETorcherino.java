@@ -16,6 +16,8 @@ import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoBlockEntity;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.RawAnimation;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 public class TETorcherino extends BlockEntity implements IEnergyStorage, GeoBlockEntity {
@@ -26,6 +28,7 @@ public class TETorcherino extends BlockEntity implements IEnergyStorage, GeoBloc
     private int randomTicks = 3;
     private Iterable<BlockPos> area;
 
+    protected static final RawAnimation IDLE_ANIM = RawAnimation.begin().thenLoop("idle");
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
     private int rangeX = 3;
@@ -121,7 +124,7 @@ public class TETorcherino extends BlockEntity implements IEnergyStorage, GeoBloc
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-
+        controllers.add(new AnimationController<>(this, state -> state.setAndContinue(IDLE_ANIM)));
     }
 
     @Override
