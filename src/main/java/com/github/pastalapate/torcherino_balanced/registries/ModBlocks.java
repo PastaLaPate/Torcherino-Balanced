@@ -13,6 +13,5 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
     public static final DeferredBlock<Block> TORCHERINO = BLOCKS.register("torcherino",
             () -> new TorcherinoBlock(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().mapColor(MapColor.STONE).noOcclusion()));
-
-
+    public static final DeferredBlock<Block> DEAD_COW = BLOCKS.register("dead_cow", () -> new Block(BlockBehaviour.Properties.of().noOcclusion()));
 }

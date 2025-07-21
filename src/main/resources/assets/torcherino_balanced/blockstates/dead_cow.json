@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "torcherino_balanced:block/dead_cow"
+    }
+  }
+}

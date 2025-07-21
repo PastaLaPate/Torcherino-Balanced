@@ -1,7 +1,8 @@
 {
   "itemGroup.torcherino_balanced": "Balanced Torcherino",
   "block.torcherino_balanced.torcherino": "Torcherino",
-  "item.torcherino_balanced.example_item": "Example Item",
+  "item.torcherino_balanced.torcherino": "Torcherino",
+  "block.torcherino_balanced.dead_cow": "Dead Cow",
   "torcherino_balanced.configuration.title": "Balanced Torcherino Configs",
   "torcherino_balanced.configuration.section.torcherino_balanced.common.toml": "Balanced Torcherino Configs",
   "torcherino_balanced.configuration.section.torcherino_balanced.common.toml.title": "Balanced Torcherino Configs",
