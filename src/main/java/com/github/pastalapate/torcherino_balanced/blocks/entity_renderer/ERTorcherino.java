@@ -12,7 +12,6 @@ public class ERTorcherino extends GeoBlockRenderer<TETorcherino> {
 
     public ERTorcherino(BlockEntityRendererProvider.Context context) {
         super(new DefaultedBlockGeoModel<>(ResourceLocation.fromNamespaceAndPath(BalancedTorcherino.MODID, "torcherino")));
-        Blocks.ACACIA_STAIRS
     }
 
 }
